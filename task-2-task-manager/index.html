@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasklane – Task Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>Tasklane</h1>
+  <p class="date" id="today"></p>
+
+  <div class="panel">
+    <div class="add">
+      <input id="text" type="text" placeholder="What needs doing?" maxlength="120" aria-label="Task title">
+      <select id="cat" aria-label="Category"><option>Work</option><option>Personal</option><option>Study</option></select>
+      <input id="due" type="date" aria-label="Due date">
+      <button id="addBtn" class="btn">Add task</button>
+    </div>
+    <div id="err" class="err" role="alert"></div>
+  </div>
+
+  <div class="bar">
+    <div class="seg" id="status" role="group" aria-label="Filter by status">
+      <button data-s="all" aria-pressed="true">All<small id="nAll">0</small></button>
+      <button data-s="active" aria-pressed="false">Active<small id="nAct">0</small></button>
+      <button data-s="done" aria-pressed="false">Completed<small id="nDone">0</small></button>
+    </div>
+    <select id="catFilter" aria-label="Filter by category"><option value="">All categories</option><option>Work</option><option>Personal</option><option>Study</option></select>
+    <input id="search" class="search" type="search" placeholder="Search tasks" aria-label="Search tasks">
+  </div>
+
+  <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+  <div class="stat"><span id="summary"></span><button id="clear" class="link">Clear completed</button></div>
+
+  <ul id="list"></ul>
+  <p class="hint">Drag the ⋮⋮ handle to reorder. Double-click a title to edit. Everything is saved in this browser.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

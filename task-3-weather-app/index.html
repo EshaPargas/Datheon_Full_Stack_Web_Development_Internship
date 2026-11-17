@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skyline – Live Weather</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="clear-day">
+<div class="wrap">
+  <div class="top">
+    <form id="form" role="search">
+      <input id="q" type="search" placeholder="Search any city, e.g. Nairobi" aria-label="City name" autocomplete="off">
+      <button class="go" type="submit">Search</button>
+    </form>
+    <div class="units" role="group" aria-label="Units">
+      <button type="button" data-u="c" aria-pressed="true">°C</button>
+      <button type="button" data-u="f" aria-pressed="false">°F</button>
+    </div>
+  </div>
+  <div id="recent" class="recent"></div>
+
+  <div id="msg" class="msg" role="alert" hidden></div>
+  <div id="spin" class="spin" role="status" aria-label="Loading weather" hidden></div>
+
+  <div id="out" hidden>
+    <div class="hero">
+      <div>
+        <h1 class="city" id="city"></h1>
+        <p class="sub" id="local"></p>
+        <div class="temp" id="temp"></div>
+        <div class="cond" id="cond"></div>
+      </div>
+      <div class="icon" id="icon" aria-hidden="true"></div>
+    </div>
+    <div class="metrics" id="metrics"></div>
+    <h2>Next 5 days</h2>
+    <div class="fc" id="fc"></div>
+    <p class="foot">Data from Open-Meteo. Local time and forecast follow the searched city's time zone.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

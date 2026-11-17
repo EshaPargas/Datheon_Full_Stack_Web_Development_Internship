@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marlo – Everyday Goods</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Marlo</div>
+  <input id="search" class="search" type="search" placeholder="Search products" aria-label="Search products">
+  <button id="open" class="cart-btn" aria-label="Open cart">Cart <span id="count" class="count" hidden>0</span></button>
+</header>
+<main>
+  <h1>Good things for everyday life.</h1>
+  <p class="sub">Electronics, jewelry and clothing, picked from a live catalog. Free shipping on orders over $100.</p>
+  <div id="filters" class="filters" role="group" aria-label="Filter by category"></div>
+  <div id="note"></div>
+  <div id="grid" class="grid" aria-live="polite"></div>
+</main>
+
+<div id="scrim" class="scrim"></div>
+<aside id="drawer" class="drawer" aria-label="Shopping cart" aria-hidden="true">
+  <div class="dh"><h2>Your cart</h2><button id="close" class="x" aria-label="Close cart">×</button></div>
+  <div id="items" class="items"></div>
+  <div class="df">
+    <div class="sum"><span>Subtotal</span><span id="sub">$0.00</span></div>
+    <div class="sum"><span>Tax (8%)</span><span id="tax">$0.00</span></div>
+    <div class="sum"><span>Shipping</span><span id="ship">$0.00</span></div>
+    <div class="sum tot"><span>Total</span><span id="total">$0.00</span></div>
+    <button id="checkout" class="go">Check out</button>
+  </div>
+</aside>
+
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="box" id="box"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
